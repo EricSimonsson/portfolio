@@ -6,6 +6,8 @@ function App() {
       <header className="App-header">
         <p>
           This is the start of my portfolio
+
+          Hello Hello
         </p>
       </header>
     </div>
