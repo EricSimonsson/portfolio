@@ -13,12 +13,19 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Routes>
-            {/**
-             * Default path to layout element
-             */}
-            <Route exact path = "/" element={< Layout />} />
-          </Routes>
+          <div>
+            <Routes>
+              {/**
+               * Default path to layout element
+               */}
+              <Route exact path = "/portfolio" element={< Home />} />
+
+              {/**
+               * path to the About element
+               */}
+              <Route exact path = "/About" element={< About />} />
+            </Routes>
+          </div>          
         </div>
       </Router>
     )
