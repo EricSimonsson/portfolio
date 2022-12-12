@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import Home from './Home';
+import About from './About';
+import Layout from './Layout';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/**
+ * @author Eric Simonsson
+ */
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Routes>
+            {/**
+             * Default path to layout element
+             */}
+            <Route exact path = "/" element={< Layout />} />
+          </Routes>
+        </div>
+      </Router>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
