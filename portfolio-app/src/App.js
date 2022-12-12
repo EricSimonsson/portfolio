@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Route, Link } from "react-router-dom";
+import { Route, Switch, Link, Routes } from "react-router-dom";
 import About from './About';
 import Home from './Home';
 
@@ -23,14 +23,15 @@ class App extends React.Component {
               </ul>
             </nav>
           </div>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/about">
-                <About />
-              </Route>
-            </Switch>
+          <Routes>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+          </Routes>
+              
           </div>
             );
   }
