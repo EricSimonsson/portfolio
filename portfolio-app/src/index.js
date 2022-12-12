@@ -1,9 +1,9 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import Home from './Home';
-import About from './About';
-import Layout from './Layout';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import AnimatedRoutes from './Components/AnimatedRoutes';
 
 /**
  * @author Eric Simonsson
@@ -11,23 +11,13 @@ import Layout from './Layout';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <div>
-            <Routes>
-              {/**
-               * Default path to layout element
-               */}
-              <Route exact path = "/portfolio" element={< Home />} />
-
-              {/**
-               * path to the About element
-               */}
-              <Route exact path = "/About" element={< About />} />
-            </Routes>
-          </div>          
-        </div>
-      </Router>
+      <div className="App">
+        <Router>
+          <Header />
+          <AnimatedRoutes />
+          <Footer />
+        </Router>
+      </div>
     )
   }
 }

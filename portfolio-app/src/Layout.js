@@ -1,5 +1,5 @@
-
-import Home from './Home';
+import Header from './Components/Header';
+import Home from './Pages/Home';
 /**
  * @author Eric Simonsson
  */
@@ -7,7 +7,8 @@ const Layout = () => {
   return (
     <>
         <div className="Layout">
-            <Home/>
+          <Header/>
+          <Home/>
         </div>
     </>
   )
