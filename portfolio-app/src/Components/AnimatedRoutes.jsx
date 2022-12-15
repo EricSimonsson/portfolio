@@ -28,12 +28,12 @@ function AnimatedRoutes(){
                 {/**
                  * path to the projects
                  */}
-                <Route exact path = "/projects" element={<Projects />} />
+                <Route exact path = "/Projects" element={<Projects />} />
                 
                 {/**
                  * path to the my contat information
                  */}
-                <Route exact path = "/contact" element={<Contact />} />
+                <Route exact path = "/Contact" element={<Contact />} />
             </Routes>
         </AnimatePresence>
     )
